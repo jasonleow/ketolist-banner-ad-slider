@@ -99,7 +99,7 @@
 		<div class="slider">
 			<transition-group tag="div" v-bind:name="transitionName">
 				<div v-if="show" v-bind:key="current" class="slider__item" v-bind:style="{ 'background-image': 'url(' + slides[current].image + ')' }" v-on:mouseover="stopRotation" v-on:mouseout="startRotation">
-					<h2>{{slides[current].title}}!</h2>
+					<h2>{{slides[current].title}}</h2>
 				</div>
 			</transition-group>
 			<div class="btn btn-prev" @click="prev()" v-on:mouseover="stopRotation" v-on:mouseout="startRotation">
@@ -120,15 +120,15 @@
 				transitionName: "fade", //
 				show: false, // Default hidden to use fade animation (fade-enter with view transitions)
 				slides: [{
-						title: null,
+						title: "",
 						image: "https://images.unsplash.com/photo-1568051243858-533a607809a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 					},
 					{
-						title: null,
+						title: "",
 						image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
 					},
 					{
-						title: null,
+						title: "",
 						image: "https://images.unsplash.com/photo-1520903433380-0422514dee1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
 					}
 				]
