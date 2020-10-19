@@ -45,7 +45,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-			padding: 0 10rem;
+			padding: 0 10em;
 		}
 
 		.text-container {
@@ -53,7 +53,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: right;
-			width: 22rem;
+			width: 22em;
 		}
 
 		.slider__item h2 {
@@ -67,7 +67,7 @@
 		.slider__item p {
 			color: #fff;
 			font-family: "helvetica, arial, open sans, sans serif", "Segoe UI", sans-serif;
-			font-size: 1rem;
+			font-size: 1em;
 			line-height: 1.5;
 			text-shadow: 1px 1px 1px #000000;
 		}
@@ -81,15 +81,30 @@
 			box-sizing: border-box;
 			transition: transform 0.3s cubic-bezier(0.374, 0.019, 0.035, 1.861),
 				-webkit-transform 0.3s cubic-bezier(0.374, 0.019, 0.035, 1.861);
-			transition-property: transform, -webkit-transform;
-			transition-duration: 0.3s, 0.3s;
-			transition-timing-function: cubic-bezier(0.374, 0.019, 0.035, 1.861),
-				cubic-bezier(0.374, 0.019, 0.035, 1.861);
-			transition-delay: 0s, 0s;
 			display: inline-block;
 			border: none;
 			cursor: pointer;
 			outline: 0;
+		}
+
+		@media (max-width: 768px) {
+			.slider__item {
+				padding: 0 5em;
+			}
+			.slider__item h2 {
+				font-size: 1.2em;
+			}
+			.slider__item p {
+				font-size: 0.6em;
+			}
+			.cta {
+				font-size: 0.7em;
+			}
+		}
+
+		.cta:hover {
+			transform: scale(1.05);
+			opacity: 1;
 		}
 
 		.btn {
